@@ -187,3 +187,31 @@
   margin-top: 40px;
   font-size: 14px;
 }
+.card-container-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 10px;
+  border: 1px solid #9290c3;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 1200px;
+}
+.card {
+  display: flex;
+  align-items: center;
+  color: #9290c3;
+  width: 300px;
+  margin: 10px 20px;
+}
+
+.card div h3 {
+  color: white;
+  font-size: 22px;
+}
+.card div img {
+  width: 70px;
+  color: #9290c3;
+  margin-right: 20px;
+}

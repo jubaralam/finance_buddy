@@ -5,6 +5,7 @@ import RealTimeProjection from "../components/RealTimeProjection";
 import { AnnualFinancialOverviewChart } from "../components/AnnualFinancialOverviewChart";
 import { financialProjectionData } from "../data";
 import Footer from "../components/Footer";
+import SmartGoalSuggestion from "../components/SmartGoalSuggestion";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <main>
         <RealTimeProjection />
         <AnnualFinancialOverviewChart data={financialProjectionData} />
+        <SmartGoalSuggestion />
       </main>
       <footer>
         <Footer />
