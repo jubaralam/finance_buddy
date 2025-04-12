@@ -2,7 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const userSlice = createSlice({
   name: "user",
-  initialState: {},
+  initialState: {
+   
+  },
   reducers: {
     setUserData: (state, action) => {
       state.user = action.payload;
@@ -10,6 +12,13 @@ const userSlice = createSlice({
     },
     resetUserData: (state) => {
       state.user = {};
+    },
+    setProjectionDetails: (state, action) => {
+      state.projectionDetails = action.payload;
+      console.log(action);
+    },
+    resetProjectionDetails: (state) => {
+      state.projectionDetails = {};
     },
   },
 });

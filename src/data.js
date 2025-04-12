@@ -124,7 +124,7 @@ export const formInputData = [
     name: "incomeGrowthRate",
     type: "option",
     required: false,
-    options: ["0%", "2%", "5%", "8%", "10%", "15%", "20%"],
+    options: ["0", "2", "5", "8", "10", "15", "20"],
   },
   {
     label: "Career Change Planned?",
@@ -182,6 +182,119 @@ export const formInputData = [
     ],
   },
 ];
+
+
+// export const formInputData = [
+//   {
+//     label: "Age",
+//     name: "age",
+//     type: "number",
+//     required: true,
+//     value: 28,
+//   },
+//   {
+//     label: "Monthly Income",
+//     name: "monthlyIncome",
+//     type: "number",
+//     required: true,
+//     value: 70000,
+//   },
+//   {
+//     label: "Monthly Fixed Expenses",
+//     name: "monthlyFixedExpenses",
+//     type: "number",
+//     required: true,
+//     value: 2000,
+//   },
+//   {
+//     label: "Monthly Savings or Investment",
+//     name: "monthlySavings",
+//     type: "number",
+//     required: true,
+//     value: 1000,
+//   },
+//   {
+//     label: "Current Savings / Balance",
+//     name: "currentSavings",
+//     type: "number",
+//     required: true,
+//     value: 3000,
+//   },
+//   {
+//     label: "Expected Yearly Income Growth Rate (%)",
+//     name: "incomeGrowthRate",
+//     type: "option",
+//     required: false,
+//     options: ["0%", "2%", "5%", "8%", "10%", "15%", "20%"],
+//     value: "5%",
+//   },
+//   {
+//     label: "Career Change Planned?",
+//     name: "careerChange",
+//     type: "radio",
+//     options: ["Yes", "No"],
+//     required: false,
+//     value: "Yes",
+//   },
+//   {
+//     label: "Expected New Income",
+//     name: "newExpectedIncome",
+//     type: "number",
+//     required: false,
+//     value: 80000,
+//   },
+//   {
+//     label: "Planned Change Year",
+//     name: "changeYear",
+//     type: "option",
+//     required: false,
+//     options: ["2025", "2026", "2027", "2028", "2029", "2030"],
+//     value: "1", // Assuming current year is 2025 + 2
+//   },
+//   {
+//     label: "Financial Goals",
+//     name: "financialGoals",
+//     type: "repeatable",
+//     fields: [
+//       {
+//         label: "Goal Name",
+//         name: "goal",
+//         type: "text",
+//         required: true,
+//       },
+//       {
+//         label: "Target Amount",
+//         name: "amount",
+//         type: "number",
+//         required: true,
+//       },
+//       {
+//         label: "Target Year",
+//         name: "targetYear",
+//         type: "option",
+//         required: true,
+//         options: [
+//           "2025",
+//           "2026",
+//           "2027",
+//           "2028",
+//           "2029",
+//           "2030",
+//           "2035",
+//           "2040",
+//         ],
+//       },
+//     ],
+//     value: [
+//       {
+//         goal: "Buy a Car",
+//         amount: 60000,
+//         targetYear: "2026", 
+//       },
+//     ],
+//   },
+// ];
+
 
 
 export const financialProjectionData = {

@@ -1,19 +1,23 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import Input from "../components/Input";
 import Button from "../components/Button";
 import axios from "axios";
 import { resetUserData, setUserData } from "../contexts/userSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { ToastContainer, toast } from "react-toastify";
 
 const SingUp = () => {
   console.log("Base URL:", import.meta.env.VITE_BASE_URL);
+
+  const navigate = useNavigate();
+
   const user = useSelector((state) => state.user);
 
   const dispatch = useDispatch();
   const baseURL = import.meta.env.VITE_BASE_URL;
   const [error, setError] = useState("");
-  const [leading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -23,22 +27,26 @@ const SingUp = () => {
 
   const handleRegister = async (e) => {
     e.preventDefault();
+    setLoading(true);
     console.log("form data", formData);
     try {
       console.log(baseURL);
 
-      const res = await axios.post(`${baseURL}/api/user/register`, formData, {
+      const res = await axios.post(`${baseURL}/api/auth/register`, formData, {
         headers: { "Content-Type": "application/json" },
       });
 
-      console.log(res.data);
-      
+      toast(res.data.message);
+      setLoading(false);
+      navigate("/login");
     } catch (error) {
+      setLoading(false);
       setError(error.message);
     }
   };
   return (
     <div className=" flex justify-center items-center h-screen w-full bg-color">
+      <ToastContainer />
       <form className="signup-form font-color  ">
         <Input
           text="Name"
@@ -75,7 +83,7 @@ const SingUp = () => {
           setFormData={setFormData}
         />
 
-        <Button text="Register" action={handleRegister} />
+        <Button text="Register" action={handleRegister} loading={loading} />
 
         <Link className="font-color redirect-to-login" to="/login">
           I have an Accound! Signin

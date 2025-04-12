@@ -19,6 +19,7 @@ const SelectDropdown = ({
         {label}
 
         <select
+        key={name}
           id={name}
           name={name}
           required={required}
