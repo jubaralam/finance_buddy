@@ -4,7 +4,7 @@ import AllRoutes from "./routes/AllRoutes";
 import "./App.css";
 import { Provider } from "react-redux";
 import store from "./contexts/store"
-import "./utitls/chartSetup"
+import "./chartSetup"
 const App = () => {
 
   return (
