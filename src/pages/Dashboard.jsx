@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Button from "../components/Button";
-import FinancialGoalsStatus from "../components/FinancialGoalsStatus";
 import MonthlySavingsChart from "../components/MonthlySavingsChart";
-
 import { financialProjectionData } from "../data";
-
 import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
-import { useSelector } from "react-redux";
 import ProjectionChart from "../components/ProjectionChart";
-import IncomeExpensesChart from "../components/IncomeExpensesChart";
+
 import { useNavigate } from "react-router-dom";
 import { AnnualFinancialOverviewChart } from "../components/AnnualFinancialOverviewChart";
 const Dashboard = () => {
@@ -79,7 +75,7 @@ const Dashboard = () => {
         <ProjectionChart data={stats?.projection || []} />
 
         <MonthlySavingsChart projection={stats?.projection || []} />
-        {/* <IncomeExpensesChart finance={stats?.finance || {}} /> */}
+
         <AnnualFinancialOverviewChart data={financialProjectionData} />
       </div>
     </div>
