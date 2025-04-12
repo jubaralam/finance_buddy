@@ -178,3 +178,12 @@
   font-size: 18px;
   text-transform: capitalize;
 }
+
+.footer {
+  background-color: #9290c3;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  font-size: 14px;
+}
