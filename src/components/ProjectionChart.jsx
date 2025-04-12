@@ -10,6 +10,7 @@ import {
   CategoryScale,
   Tooltip,
   Legend,
+  BarController
 } from "chart.js";
 
 ChartJS.register(
@@ -19,7 +20,8 @@ ChartJS.register(
   CategoryScale,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  BarController
 );
 
 // const ProjectionChart = ({ data }) => {

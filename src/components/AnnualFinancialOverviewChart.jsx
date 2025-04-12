@@ -1,6 +1,15 @@
-
 import React from "react";
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, LineElement, PointElement, Legend, Tooltip } from "chart.js";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  LineElement,
+  PointElement,
+  Legend,
+  Tooltip,
+  BarController,
+} from "chart.js";
 import { Chart } from "react-chartjs-2";
 
 ChartJS.register(
@@ -10,7 +19,8 @@ ChartJS.register(
   LineElement,
   PointElement,
   Legend,
-  Tooltip
+  Tooltip,
+  BarController
 );
 
 export const AnnualFinancialOverviewChart = ({ data }) => {
@@ -88,5 +98,9 @@ export const AnnualFinancialOverviewChart = ({ data }) => {
     },
   };
 
-  return <div className="chart"><Chart type="bar" data={chartData} options={options} /></div>
+  return (
+    <div className="chart">
+      <Chart type="bar" data={chartData} options={options} />
+    </div>
+  );
 };

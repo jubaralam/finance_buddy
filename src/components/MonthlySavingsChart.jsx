@@ -9,6 +9,7 @@ import {
   Title,
   Tooltip,
   Legend,
+  BarController
 } from "chart.js";
 
 ChartJS.register(
@@ -18,7 +19,8 @@ ChartJS.register(
   LineElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  BarController
 );
 
 const MonthlySavingsChart = ({ projection = [] }) => {

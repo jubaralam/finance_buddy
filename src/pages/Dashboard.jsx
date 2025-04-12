@@ -20,14 +20,15 @@ const Dashboard = () => {
 
   const [token, setToken] = useState("");
   const [user, setUser] = useState({});
-  console.log("token from local storage", token);
+  console.log("user id", 
+    user._id);
   const fetchProjectionDetails = async () => {
     console.log(
       `${import.meta.env.VITE_BASE_URL}/api/finance/projection/${user._id}`
     );
     try {
       const res = await axios.get(
-        `${import.meta.env.VITE_BASE_URL}/api/finance/projection/${user._id}`,
+        `${import.meta.env.VITE_BASE_URL}/api/finance/projection/67f9fbb1b2ebfc084b9bd25f`,
         {
           headers: {
             "Content-Type": "application/json",
